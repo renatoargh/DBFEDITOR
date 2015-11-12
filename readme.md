@@ -22,7 +22,8 @@
       precision: '2'
     }, {
       name: 'registDate',
-      type: 'C'
+      type: 'C',
+      size:10
     }
     ];
 
