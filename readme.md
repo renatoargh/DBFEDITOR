@@ -2,7 +2,7 @@
 ## Example
 
 ### DBFWriter
-    dbfEditor = require "dbfkit"
+    dbfEditor = require "dbf-editor"
     DBFWriter = dbfEditor.DBFWriter
 
     header = [
@@ -52,7 +52,7 @@
     console.log("finish");
 
 ### DBFParser
-    dbfEditor = require "dbfkit"
+    dbfEditor = require "dbf-editor"
     DBFParser = dbfEditor.DBFParser
     
     pathName = './dbfout';
