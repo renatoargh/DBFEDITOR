@@ -1,6 +1,6 @@
 {
   "name": "dbf-editor",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "help to parse dbf file and write dbf file with size",
   "main": "index.js",
   "dependencies": {
