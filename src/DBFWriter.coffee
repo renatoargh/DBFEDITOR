@@ -100,7 +100,7 @@ class DBFWriter
         totalFieldsLength = 1
         for head in header
             if FIELDSIZE[head.type]
-                head.size = FIELDSIZE[head.type]
+                head.size = FIELDSIZE[head.type] unless head.size
                 head.precision = 0 unless head.precision
                 totalFieldsLength += head.size
             else
@@ -153,7 +153,7 @@ class DBFWriter
                         offset = @_writeBufferNumber val, head, wsBuffer, offset
                     when 'L'
                         offset = @_writeBufferLogic val, head, wsBuffer, offset
-        wsBuffer.writeUInt8 26, offset#26 (1Ah) EOF marker
+        wsBuffer.writeUInt8 26, offset #26 (1Ah) EOF marker
     _writeBufferString: (val, head, wsBuffer, offset)->
         val = "" unless val
         if val instanceof Date
